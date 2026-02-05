@@ -1,24 +1,46 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const numbersContainer = document.getElementById('numbers-container');
-  const generateBtn = document.getElementById('generate-btn');
+    const themeSwitch = document.getElementById('theme-switch');
+    const generateBtn = document.getElementById('generate-btn');
+    const numbersContainer = document.getElementById('numbers-container');
 
-  function generateTotoNumbers() {
-    numbersContainer.innerHTML = '';
-    const numbers = new Set();
-    while (numbers.size < 6) {
-      numbers.add(Math.floor(Math.random() * 49) + 1);
+    // Theme switcher
+    themeSwitch.addEventListener('change', () => {
+        document.body.classList.toggle('dark-mode');
+        localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+    });
+
+    // Load saved theme
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark-mode');
+        themeSwitch.checked = true;
     }
 
-    numbers.forEach(number => {
-      const numberDiv = document.createElement('div');
-      numberDiv.classList.add('number');
-      numberDiv.textContent = number;
-      numbersContainer.appendChild(numberDiv);
-    });
-  }
+    // Toto number generation
+    const generateTotoNumbers = () => {
+        numbersContainer.innerHTML = '';
+        const numbers = [];
+        while (numbers.length < 7) {
+            const randomNumber = Math.floor(Math.random() * 49) + 1;
+            if (!numbers.includes(randomNumber)) {
+                numbers.push(randomNumber);
+            }
+        }
 
-  generateBtn.addEventListener('click', generateTotoNumbers);
+        numbers.forEach((number, index) => {
+            setTimeout(() => {
+                const numberEl = document.createElement('div');
+                numberEl.classList.add('number');
+                if (index === 6) {
+                    numberEl.classList.add('additional');
+                }
+                numberEl.textContent = number;
+                numbersContainer.appendChild(numberEl);
+            }, index * 200);
+        });
+    };
 
-  // Initial generation
-  generateTotoNumbers();
+    generateBtn.addEventListener('click', generateTotoNumbers);
+
+    // Initial generation
+    generateTotoNumbers();
 });

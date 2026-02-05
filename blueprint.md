@@ -1,31 +1,32 @@
 # Project Blueprint
 
 ## Overview
-This project is a framework-less web application, primarily utilizing HTML, CSS, and JavaScript. It is developed within the Firebase Studio environment, leveraging modern web standards and focusing on a visually appealing, accessible, and responsive user experience.
+This project is a Toto number generator with a Lunar Chinese New Year theme. It features a day and night mode, allowing users to switch between a light and dark color scheme. The application is built using modern HTML, CSS, and JavaScript, with a focus on a visually appealing, accessible, and responsive user experience.
 
 ## Project Documentation
 ### Initial Version
 The project was initialized with a basic web structure including `index.html`, `style.css`, and `main.js`.
-- `index.html`: The main entry point of the application.
-- `style.css`: Contains styles for the application.
-- `main.js`: Contains JavaScript logic.
-- A `.gitignore` file was added to exclude `firebase-debug.log` from version control.
 
 ### Implemented Features
-- **Git Repository Setup:** The project is under version control with Git.
-- **Remote Repository Integration:** The project is connected to a GitHub repository (`https://github.com/chanmelina-cpu/vibe-2026-feb-05-11`).
-- **Initial Commit and Push:** All initial project files and `.gitignore` have been committed and pushed to the remote repository.
+- **Toto Number Generator:** Generates a set of random numbers for a lottery game.
+- **Day/Night Mode:** A theme switcher to toggle between light and dark color schemes.
+- **Lunar New Year Theme:** The application is styled with a festive theme, including appropriate colors, typography, and iconography.
+- **Responsive Design:** The layout adapts to different screen sizes, ensuring a good experience on both mobile and desktop devices.
+- **Modern Web Standards:** The project utilizes modern HTML, CSS (including CSS variables and flexbox), and JavaScript (ES Modules, async/await).
 
 ## Current Plan and Steps for Changes
 
-### Previous Request
-The user requested to commit and push all work to the provided GitHub repository.
+### Current Request
+The user wants to create a day and night version of a Toto generator with a Lunar Chinese New Year theme.
 
-### Action Taken
-1.  Staged all existing changes and the newly created `.gitignore` file.
-2.  Committed the changes with the message "Initial commit with project files and gitignore".
-3.  Added the provided GitHub repository as a remote named 'origin'.
-4.  Pushed the committed changes to the 'main' branch of the 'origin' remote.
-
-### Status
-The request has been successfully completed. Initial project setup and synchronization with the remote repository are finished.
+### Action Plan
+1.  **Update `index.html`:**
+    *   Create the basic structure for the Toto generator, including a title, a container for the generated numbers, a "Generate" button, and a theme switcher.
+2.  **Update `style.css`:**
+    *   Implement the day and night themes using CSS variables for easy switching.
+    *   Style the page with a Lunar New Year theme, including festive colors, typography, and a responsive layout.
+3.  **Update `main.js`:**
+    *   Implement the logic for generating random Toto numbers.
+    *   Add event listeners to the "Generate" button and the theme switcher to handle user interactions.
+4.  **Review and Refine:**
+    *   Test the application in the browser to ensure all features work as expected and the design is visually appealing.

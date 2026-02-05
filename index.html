@@ -1,17 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Toto Number Generator</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunar New Year Toto Generator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Toto Number Generator</h1>
-    <div id="numbers-container"></div>
-    <button id="generate-btn">Generate Numbers</button>
-  </div>
-  <script src="main.js"></script>
+    <div class="container">
+        <h1>Lunar New Year Toto Generator</h1>
+        <div class="theme-switcher">
+            <label for="theme-switch">
+                <input type="checkbox" id="theme-switch">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="toto-card">
+            <div class="toto-header">
+                <h2>Your Lucky Numbers</h2>
+            </div>
+            <div class="toto-body">
+                <div id="numbers-container" class="numbers-container">
+                </div>
+                <button id="generate-btn">Generate</button>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
 </body>
 </html>
